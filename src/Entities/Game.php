@@ -53,11 +53,16 @@ class Game extends Entity
 
     public function whichPlayer() : Player
     {
+        $resultPlayer = null;
+
         foreach ($this->players as $player) {
             if ($player != $this->lastPlayer) {
-                return $player;
+                $resultPlayer = $player;
+                break;
             }
         }
+
+        return $resultPlayer;
     }
 
     public function status() : string

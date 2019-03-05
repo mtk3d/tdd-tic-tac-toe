@@ -12,10 +12,10 @@ final class GameTest extends TestCase
     public function setUp() : void
     {
         $markX = $this->createMock(Mark::class);
-        $markX->method('getChar')->willReturn('x');
+        $markX->method('getChar')->willReturn(Mark::SHARP);
 
         $markO = $this->createMock(Mark::class);
-        $markO->method('getChar')->willReturn('o');
+        $markO->method('getChar')->willReturn(Mark::CIRCLE);
 
         $this->playerOne = $this->createMock(Player::class);
         $this->playerOne->method('getName')->willReturn('John');

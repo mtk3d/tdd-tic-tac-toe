@@ -11,10 +11,10 @@ final class BoardTest extends TestCase
     public function setUp() : void
     {
         $this->markX = $this->createMock(Mark::class);
-        $this->markX->method('getChar')->willReturn('x');
+        $this->markX->method('getChar')->willReturn(Mark::SHARP);
 
         $this->markO = $this->createMock(Mark::class);
-        $this->markO->method('getChar')->willReturn('o');
+        $this->markO->method('getChar')->willReturn(Mark::CIRCLE);
     }
 
     public function testCreatesValidBoard() : void
